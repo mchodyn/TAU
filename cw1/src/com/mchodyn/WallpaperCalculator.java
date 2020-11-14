@@ -7,7 +7,7 @@ public class WallpaperCalculator {
     private double wallHeight;
     private double excludedSurface;
 
-    public WallpaperCalculator(double wallWidth, double wallHeight, double holes) {
+    public WallpaperCalculator(double wallWidth, double wallHeight, double excludedSurface) {
         this.wallWidth = wallWidth;
         this.wallHeight = wallHeight;
         this.excludedSurface = excludedSurface;
@@ -40,9 +40,10 @@ public class WallpaperCalculator {
 
     public double calculate() {
         double wallSurface = this.wallHeight * this.wallWidth;
-        if(wallSurface < this.excludedSurface) {
+
+        if (wallSurface < this.getExcludedSurface()) {
+
             throw new NotImplementedException();
-        }
-        else return wallSurface - excludedSurface;
+        } else return wallSurface - this.getExcludedSurface();
     }
 }
