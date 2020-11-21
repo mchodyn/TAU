@@ -41,7 +41,7 @@ def navigation_test_pepper(driver):
         driver.quit()
 
     except Exception as e:
-        log(40, 'Error occured while running test for pepper navigation for ' + driver.name + ' ' + str(e))
+        log(40, 'Error occurred while running test for pepper navigation for ' + driver.name + ' ' + str(e))
     finally:
         log(20, 'Finished test for pepper navigation for ' + driver.name)
 

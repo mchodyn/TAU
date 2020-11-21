@@ -34,6 +34,6 @@ def add_to_cart_test_zalando(driver):
         driver.quit()
 
     except Exception as e:
-        log(40, 'Error occured while running test for zalando add to cart for ' + driver.name + ' ' + str(e))
+        log(40, 'Error occurred while running test for zalando add to cart for ' + driver.name + ' ' + str(e))
     finally:
         log(20, 'Finished test for zalando add to cart for ' + driver.name)
