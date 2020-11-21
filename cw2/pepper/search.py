@@ -24,9 +24,6 @@ def search_test_pepper(driver):
         log(20, "Pepper search test for " + driver.name + ' checking searched term')
         assert 'patelnie' in driver.title
 
-        driver.stop_client()
-        driver.quit()
-
     except Exception as e:
         log(40, 'Error occurred while running test for pepper search for ' + driver.name + ' ' + str(e))
     finally:

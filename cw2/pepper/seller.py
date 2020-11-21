@@ -1,13 +1,11 @@
-import sys, os, time
+import sys, os
 
 sys.path.insert(0, os.path.abspath('..'))
-
-from selenium.webdriver.common.keys import Keys
 
 from logger import log
 
 
-def best_sellers_test_pepper(driver):
+def sellers_test_pepper(driver):
     try:
         log(20, "Starting pepper seller test for " + driver.name)
 
@@ -22,9 +20,6 @@ def best_sellers_test_pepper(driver):
         assert 'Empik' in driver.title
         assert 'Empik' in driver.find_element_by_xpath(
             '//*[@id="main"]/div[1]/section[1]/header/div[2]/div[1]/div/div[2]/h1').text
-
-        driver.stop_client()
-        driver.quit()
 
     except Exception as e:
         log(40, 'Error occurred while running test for pepper seller for ' + driver.name + ' ' + str(e))

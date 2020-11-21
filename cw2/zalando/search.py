@@ -14,6 +14,7 @@ def search_test_zalando(driver):
         log(20, "Zalando search test for " + driver.name + ' entering site')
         driver.get("https://www.zalando.pl/mezczyzni-home/")
 
+        time.sleep(3)
         log(20, "Zalando search test for " + driver.name + ' passing search query')
         driver.find_element_by_xpath(
             '//*[@id="z-navicat-header-root"]/header/div[2]/div/div/div/div[1]/div/div/div/div[2]/div[3]/form/div/input').send_keys(
@@ -26,9 +27,6 @@ def search_test_zalando(driver):
         log(20, "Zalando search test for " + driver.name + ' checking searched term')
         element = driver.find_element_by_xpath('//*[@id="z-nvg-cognac-root"]/div[1]/div[1]/div[2]/div/div/div/div/div/span/h1').text
         assert 'jeansy' in element
-
-        driver.stop_client()
-        driver.quit()
 
     except Exception as e:
         log(40, 'Error occurred while running test for zalando search for ' + driver.name + ' ' + str(e))

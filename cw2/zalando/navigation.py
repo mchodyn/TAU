@@ -32,9 +32,6 @@ def navigation_test_zalando(driver):
         assert "dziecięce" in driver.title
         time.sleep(1)
 
-        driver.stop_client()
-        driver.quit()
-
     except Exception as e:
         log(40, 'Error occurred while running test for zalando navigation for ' + driver.name + ' ' + str(e))
     finally:
