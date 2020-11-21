@@ -2,7 +2,6 @@ import sys, os, time
 
 sys.path.insert(0, os.path.abspath('..'))
 
-from selenium.webdriver.common.keys import Keys
 
 from logger import log
 
@@ -17,18 +16,21 @@ def navigation_test_zalando(driver):
         log(20, "Zalando navigation test for " + driver.name + ' choosing women navigation')
         driver.find_element_by_xpath(
             '//*[@id="z-navicat-header-root"]/header/div[2]/div/div/div/div[1]/div/div/div/div[1]/div[1]/nav/ul/li[1]/a').click()
-        print(driver.title)
+        assert "damska" in driver.title
+        time.sleep(1)
 
-        time.sleep(5)
-        # driver.find_element_by_xpath(
-        #     '//*[@id="z-navicat-header-root"]/header/div[2]/div/div/div/div[1]/div/div/div/div[2]/div[3]/form/div/input').send_keys(
-        #     Keys.ENTER)
-        # time.sleep(5)
-        #
-        # log(20, "Zalando search test for " + driver.name + ' checking searched term')
-        # element = driver.find_element_by_xpath(
-        #     '//*[@id="z-nvg-cognac-root"]/div[1]/div[1]/div[2]/div/div/div/div/div/span/h1').text
-        # assert 'jeansy' in element
+        log(20, "Zalando navigation test for " + driver.name + ' choosing men navigation')
+        driver.find_element_by_xpath(
+            '//*[@id="z-navicat-header-root"]/header/div[2]/div/div/div/div[1]/div/div/div/div[1]/div[1]/nav/ul/li[2]/a').click()
+        assert "męska" in driver.title
+
+        time.sleep(1)
+
+        log(20, "Zalando navigation test for " + driver.name + ' choosing kid navigation')
+        driver.find_element_by_xpath(
+            '//*[@id="z-navicat-header-root"]/header/div[2]/div/div/div/div[1]/div/div/div/div[1]/div[1]/nav/ul/li[3]/a').click()
+        assert "dziecięce" in driver.title
+        time.sleep(1)
 
         driver.stop_client()
         driver.quit()
