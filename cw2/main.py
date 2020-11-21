@@ -14,5 +14,5 @@ for driver in drivers:
     # navigation_test_pepper(driver)
     # search_test_pepper(driver)
     # search_test_zalando(driver)
-    # navigation_test_zalando(driver)
-    add_to_cart_test_zalando(driver)
+    navigation_test_zalando(driver)
+    # add_to_cart_test_zalando(driver)
