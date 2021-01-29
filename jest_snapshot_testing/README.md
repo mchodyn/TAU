@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This small project shows usage of [Jest](https://jestjs.io/docs) snapshot testing feature. It is a great way to test UI components and prevent form unexpected changes.
 More about snapshot testing could be found [here](https://jestjs.io/docs/en/snapshot-testing)
 
-##Starting 
+## Starting 
 
 After downloading this project follow those steps:
 1. Install dependencies
@@ -38,7 +38,7 @@ Using available options from terminal window save a new snapshot. Now test is pa
 
 ![](https://i.imgur.com/B75tbaT.png)
 
-##How does it work
+## How does it work
 
 To fully understand how this feature works lets discuss code below
 ![](https://i.imgur.com/gwyo325.png)
