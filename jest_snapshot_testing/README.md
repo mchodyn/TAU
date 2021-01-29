@@ -33,11 +33,13 @@ This is due to the fact that saved snapshot of this component doesn't match to t
 ![](https://i.imgur.com/jFd2FJj.png)
 
 ![](https://i.imgur.com/WLmRyXI.png)
+
 Using available options from terminal window save a new snapshot. Now test is passing.
 
 ![](https://i.imgur.com/B75tbaT.png)
 
 ##How does it work
+
 To fully understand how this feature works lets discuss code below
 ![](https://i.imgur.com/gwyo325.png)
 
